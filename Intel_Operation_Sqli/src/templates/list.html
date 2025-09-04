@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block header %}
+  <h1 class="text-center">Your Order Sir, Here are the Operation details</h1>
+{% endblock %} 
+
+{% block content %}
+    <table class="table table-hover">
+        <thead >
+            <tr class="w-25">
+                <th scope="col">Code</th>
+                <th scope="col">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for op in operations %}
+            <tr class="w-25">
+                <td>
+                    {{ op['code'] }}
+                </td>
+                <td>
+                    {{ op['name'] }}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+{% endblock %}
