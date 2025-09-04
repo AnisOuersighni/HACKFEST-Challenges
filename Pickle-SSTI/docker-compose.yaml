@@ -1,0 +1,8 @@
+services:
+  pickle-factory:
+    container_name: pickle-factory
+    build:
+      dockerfile: ./Dockerfile
+      context: .  # Update the context to point to the correct directory
+    ports:
+      - "9229:9229"
