@@ -1,0 +1,28 @@
+name: "IS THAT YOU"
+author: "Jerbi"
+category: web
+
+description: |
+  Help me access the admin portal! 
+  
+  We will be then safe!
+
+value: 200
+type: dynamic_docker
+extra:
+  initial: 200
+  minimum: 100
+  decay: 25
+  redirect_type: http
+  compose_stack: !filecontents docker-compose.yml
+  scope: global
+
+flags:
+  - HACKFEST{w3LcoMe_C4pTain_955488}
+
+tags:
+  - web
+  - beginner
+
+state: visible
+version: "0.1"
