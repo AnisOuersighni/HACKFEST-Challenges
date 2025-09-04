@@ -1,3 +1,3 @@
-This is CALL OF DUTY Themed Challenge.
-Category : Web.
-Diffuclty : Easy.
+This is CALL OF DUTY Themed Challenge.  
+Category : Web.  
+Diffuclty : Easy.  
