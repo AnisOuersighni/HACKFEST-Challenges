@@ -1,0 +1,122 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 700px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Login Box */
+.login-box {
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #6d0000;
+}
+
+.login-box input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-box .btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #490505;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-box .btn:hover {
+    background-color: #af9e9e;
+}
+
+/* Welcome Box */
+.welcome-box {
+    text-align: center;
+}
+
+.welcome-box h2 {
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.welcome-box p {
+    font-size: 18px;
+}
+
+.welcome-box a {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.welcome-box a:hover {
+    background-color: #218838;
+}
+
+/* Special Agent Styling */
+.agent-box {
+    background-color: #d4edda;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.agent-box h3 {
+    font-size: 20px;
+    color: #155724;
+}
+
+.agent-box .btn {
+    background-color: #28a745;
+}
+
+.agent-box .btn:hover {
+    background-color: #218838;
+}
