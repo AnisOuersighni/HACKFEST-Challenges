@@ -1,8 +1,8 @@
 
-This is WATCH DOGS Themed Challenge.
-Category : Web.
-Diffuclty : Meduim.
-TLDR : Code injection with filters bypass => 
+This is WATCH DOGS Themed Challenge.  
+Category : Web.  
+Diffuclty : Meduim.   
+TLDR : Code injection with filters bypass =>   
 ```
 # Operation Day, only our Agent can lunch the explosion command 
 # Communicate with  ctOC . Central Operation Center
