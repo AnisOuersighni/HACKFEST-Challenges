@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: zero_day_web
+    ports:
+      - "8081:80"
+    volumes:
+      - ./src/www:/var/www/html
+    depends_on:
+      - db
+    networks:
+      zero_day_net:
+        ipv4_address: 172.28.0.4  # Fix IP address for web container
+
+  db:
+    image: mariadb:10.5
+    container_name: zero_day_db
+    environment:
+      MYSQL_ROOT_PASSWORD: DedSec_Revenge!!!
+      MYSQL_DATABASE: zero_day
+      MYSQL_USER: jerbi
+      MYSQL_PASSWORD: zer0_day_p@Sswo0rd
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./database/init_db.sql:/docker-entrypoint-initdb.d/init_db.sql
+      - ./database/grant_privileges.sql:/docker-entrypoint-initdb.d/grant_privileges.sql  # Grant privileges script
+
+    ports:
+      - "3306:3306"
+    networks:
+      zero_day_net:
+        ipv4_address: 172.28.0.3  # Fix IP address for db container
+
+networks:
+  zero_day_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: "172.28.0.0/16"
+
+volumes:
+  db_data:
+
+#sudo docker-compose up --build
+#sudo docker-compose down
+#sudo docker volume rm zero_day_db_data
+#sudo docker-compose up --build
+
+#sudo docker exec -it zero_day_db bash
+
+#sudo docker exec -it zero_day_web bash
+
+##exit  # To exit MySQL
+# docker-compose restart db
+##sudo docker-compose down 
+
+#sudo docker logs zero_day_db 

