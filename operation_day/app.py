@@ -25,8 +25,17 @@ def run_command():
         # Perform security checks
         if '..' in command or '/' in command:
             return jsonify({'message': 'Hacking attempt detected, Be more creative!'}), 501
-
-        # Find path to executable
+        # NEW: Space filter - no spaces allowed!
+        if ' ' in command:
+            return jsonify({'message': 'No spaces allowed in commands!'}), 501
+        
+        # NEW: Block dangerous characters
+        dangerous_chars = [ '|', '&', '`', '(', ')', '<', '>', '\n', '\r', '\t']
+        for char in dangerous_chars:
+            if char in command:
+                return jsonify({'message': f'Character "{char}" not allowed!'}), 501
+        
+        # Find path to executable - the first tool should be executable 
         executable_to_run = command.split()[0]
 
         # Check if we can execute the binary
